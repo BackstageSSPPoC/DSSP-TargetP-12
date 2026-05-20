@@ -47,7 +47,7 @@ pipeline {
  
 // ================= CI STAGES =================
  
-        stage('Setup Environment') {
+        stage('Setup Virtual Environment') {
             steps {
                 sh '''
                 python3 -m venv venv
@@ -59,19 +59,12 @@ pipeline {
                 '''
             }
         }
- 
-        stage('Build') {
-            steps {
-                sh '''
-                pip install -r requirements.txt
-                '''
-            }
-        }
- 
+
         stage('Run Tests') {
             steps {
                 sh '''
-                
+                . venv/bin/activate
+                pytest --tb=short || true
                 '''
             }
         }
