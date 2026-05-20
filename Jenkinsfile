@@ -10,7 +10,7 @@ pipeline {
  
     environment {
         APP_NAME = "DSSP-TargetP-12".toLowerCase().trim()
-        DOCKER_IMAGE = "chaitanyapandeygspann/DSSP-TargetP-12"
+        DOCKER_IMAGE = "chaitanyapandeygspann/DSSP-TargetP-12".toLowerCase().trim()
         DOCKER_TAG = "1.0.${BUILD_NUMBER}"
         IMAGE_TAG = "${DOCKER_IMAGE}:${DOCKER_TAG}"
         GITOPS_REPO = "https://github.com/BackstageSSPPoC/k8s-manifests.git"
