@@ -6,8 +6,8 @@
 
 FROM python:3.11-slim AS builder
 WORKDIR /install
-COPY requirements*.txt ./
-RUN pip install --upgrade pip && pip install -r requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
  
 FROM python:3.11-slim
 WORKDIR /app
@@ -17,5 +17,5 @@ COPY . .
 USER appuser
 EXPOSE 5000
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-  CMD wget -qO- http://localhost:8000/health || exit 1
+  CMD wget -qO- http://localhost:5000/health || exit 1
 ENTRYPOINT ["python", "app.py"]
