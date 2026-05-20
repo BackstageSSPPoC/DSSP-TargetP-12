@@ -97,7 +97,7 @@ pipeline {
                 expression { env.RUN_MODE == "cd" }
             }
             steps {
-                sh "docker build --no-cache -t ${IMAGE_TAG} ."
+                sh 'docker build -t ${IMAGE_TAG} .'
             }
         }
  
