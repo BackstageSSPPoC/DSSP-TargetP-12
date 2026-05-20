@@ -7,9 +7,9 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     jenkins.io/job-full-name: Backstage_SSP_PoC/DSSP-TargetP-12/main
     argocd/app-name: dssp-targetp-12-dev
-    backstage.io/kubernetes-id: DSSP-TargetP-12
-    sonarqube.org/project-key: dssp-targetp-12
+    backstage.io/kubernetes-id: dssp-targetp-12
+    sonarqube.org/project-key: DSSP-TargetP-12
 spec:
   type: service
-  lifecycle: qa
+  lifecycle: dev
   owner: user:default/guest
