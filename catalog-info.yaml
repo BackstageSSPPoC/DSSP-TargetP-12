@@ -5,9 +5,10 @@ metadata:
   annotations:
     github.com/project-slug: BackstageSSPPoC/DSSP-TargetP-12
     backstage.io/techdocs-ref: dir:.
-    jenkins.io/job-full-name: BackstageSSPPoC/DSSP-TargetP-12/main
-    argocd/app-name: DSSP-TargetP-12-qa
-    sonarqube.org/project-key: DSSP-TargetP-12
+    jenkins.io/job-full-name: Backstage_SSP_PoC/DSSP-TargetP-12/main
+    argocd/app-name: dssp-targetp-12-qa
+    backstage.io/kubernetes-id: DSSP-TargetP-12
+    sonarqube.org/project-key: dssp-targetp-12
 spec:
   type: service
   lifecycle: qa
