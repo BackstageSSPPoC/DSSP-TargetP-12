@@ -15,7 +15,7 @@ RUN groupadd -r appgroup && useradd -r -g appgroup appuser
 COPY --from=builder /install /usr/local
 COPY . .
 USER appuser
-EXPOSE 8000
+EXPOSE 5000
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
   CMD wget -qO- http://localhost:8000/health || exit 1
 ENTRYPOINT ["python", "app.py"]
